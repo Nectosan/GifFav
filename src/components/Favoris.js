@@ -9,20 +9,21 @@ function Favoris() {
 
   const [gif, setGif] = useState("");
 
+  //Fonction permettant d'enlever le gif sélectionné des favoris
   const removeFav = id => () => {
     setGif(id)
     console.log(gif)
     localStorage.removeItem(id);
   }
 
-
-
+  //Lorsqu'un gif n'a pas de nom dans le json, on lui affecte ce string par défaut
   function getGifName(nameGif) {
     if (nameGif==="")
       return "Ce gif n'a pas de nom 😔"
     return nameGif
   }
 
+  //On récupère les gifs depuis le localStorage puis on les affiche
   const getGif = () => {
 
     let tab = [];
@@ -39,14 +40,11 @@ function Favoris() {
               <Card.Title className="titleGif">{nameGif}</Card.Title>
               <Card.Img id="imagefav" variant="top" src={JSON.parse(localStorage.getItem(id)).images.original.url} />
               <Card.Body>
-
-              <Button variant="primary" key={"button" + id} onClick={removeFav(id)}>
-                Enlever de la liste
-              </Button>
+                <Button variant="primary" key={"button" + id} onClick={removeFav(id)}>
+                  Enlever de la liste
+                </Button>
               </Card.Body>
             </Card>
-
-
           </div>
 
         )
@@ -58,6 +56,9 @@ function Favoris() {
 
   return (
     <div>
+      <div className="wrapper">
+        <ParticlesBg num={10} type="" bg={true} />
+      </div>
       <Navbar bg="dark" variant="dark" >
         <Container className="container">
           <Navbar.Brand href="#home">Richard CHEN</Navbar.Brand>
@@ -68,15 +69,12 @@ function Favoris() {
         </Container>
       </Navbar>
 
-      <div className="wrapper">
-        <ParticlesBg num={10} type="" bg={true} />
-      </div>
       <h1> Mes Favoris </h1>
+      
       <div id="flex">
         {getGif()}
       </div>
     </div>
-
 
   )
 }

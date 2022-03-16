@@ -8,6 +8,8 @@ function App() {
 
   return (
 
+    //Ici on définits les différentes routes afin de naviguer à travers les différentes pages par la suite
+
     <BrowserRouter>
 
       <Switch>
