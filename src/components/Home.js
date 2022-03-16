@@ -15,7 +15,6 @@ function Home() {
     const [favtitle, setfavtitle] = useState("Featured");
     const [gif, setGif] = useState({});
     const [titlegif, settitleGif] = useState("");
-    const [isinit, setinit] = useState({});
 
     const random = async () => {
         try {
@@ -35,7 +34,6 @@ function Home() {
     };
 
     useEffect(() => {
-        setinit(true)
         random()
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
