@@ -54,8 +54,9 @@ function Home() {
     return (
 
         <div className="center">   
+     <div className="wrapper">
 
-            <ParticlesBg num={10} type="" bg={true} />
+<ParticlesBg num={10} type="" bg={true} /> </div>
             <Navbar className="nav" bg="dark" variant="dark" >
                 <Container className="container">
                     <Navbar.Brand href="#home">Richard CHEN</Navbar.Brand>
@@ -79,7 +80,7 @@ function Home() {
                     </Card.Body>
                 </Card>
                 <button className="random" onClick={async () => {random()}}> <span> Next GIF 👏 </span></button>
-            </div>
+            </div> 
         </div>)
 }
 
