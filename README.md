@@ -15,9 +15,3 @@ L'intérêt du projet est de pouvoir générer des gifs de manière aléatoire p
 Developers.giphy.com nous sert d'api.
 
 Ce projet a été réalisé avec les langages react.js/CSS
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
