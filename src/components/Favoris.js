@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import { Link } from "react-router-dom";
 import { Card, Button, Nav, Navbar, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,12 +7,15 @@ import '../assets/styles/Favoris.css';
 
 function Favoris() {
 
-  const [gif, setGif] = useState();
+  const [gif, setGif] = useState("");
 
   const removeFav = id => () => {
     setGif(id)
+    console.log(gif)
     localStorage.removeItem(id);
   }
+
+
 
   function getGifName(nameGif) {
     if (nameGif==="")

@@ -15,11 +15,11 @@ function Home() {
     const [favtitle, setfavtitle] = useState("Featured");
     const [gif, setGif] = useState({});
     const [titlegif, settitleGif] = useState("");
+    const [isinit, setinit] = useState({});
 
     const random = async () => {
         try {
             const result = await gf.random();
-            console.log(`random`, result);
             setUrlGif(`https://media1.giphy.com/media/${result.data.id}/giphy.gif`)
             settitleGif(result.data.title)
             setGif(result.data);
@@ -35,7 +35,9 @@ function Home() {
     };
 
     useEffect(() => {
+        setinit(true)
         random()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const addFav = () => {
@@ -45,7 +47,7 @@ function Home() {
 
     return (
 
-        <div className="center">      
+        <div className="center">    
             <Navbar bg="dark" variant="dark" >
                 <Container className="container">
                     <Navbar.Brand href="#home">Richard CHEN</Navbar.Brand>

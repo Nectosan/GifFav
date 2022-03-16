@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Favoris from './components/Favoris';
 import Home from './components/Home';
 
