@@ -1,0 +1,122 @@
+
+.random{
+    display: inline-block;
+    width:300px;
+    line-height: 22px;
+    margin: 0px;
+    margin-top:10px;
+    margin-bottom:10px;
+    padding: 29px 64px;
+    border: none;
+    border-radius: 100vw;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease 0s, color 0.2s ease 0s;
+    background-color: rgb(71, 71, 71);
+    color: #F3F3F3;
+    transition: all 0.5s;
+}
+
+.random:hover{
+    background-color: #323232;
+}
+
+.random span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+.random span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+.random:hover span {
+    padding-right: 25px;
+  }
+  
+.random:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+.center{
+    text-align: center;
+    margin: auto;
+}
+
+.buttonFav{
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: 0.5;
+}
+
+.buttonFav:hover{
+  
+    background-color: red;
+}
+
+.buttonFav:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+.favtitle {
+    font-style: italic;
+    font-weight: 500;
+}
+
+.image{
+    margin: auto;
+    margin-top: 20px;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.link{
+    vertical-align: middle;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #F3F3F3;
+}
+
+.container {
+    vertical-align: middle;
+}
+
+#card{
+    width: 50%;
+    margin: auto;
+    margin-top: 150px;
+}
+
+.titleGif{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media  screen and (max-width: 700px) {
+  
+    .card{
+        width: 75%;
+       
+    }
+    
+}
+
+@media  screen and (max-width: 450px) {
+  
+    .card{
+        margin-top: 70px;
+       
+    }
+    
+}
